@@ -3,9 +3,11 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("org.springframework.boot") version "2.2.2.RELEASE"
     id("io.spring.dependency-management") version "1.0.8.RELEASE"
+    id("org.jetbrains.kotlin.plugin.noarg") version "1.3.61" apply true
+    id("org.jetbrains.kotlin.plugin.allopen") version "1.3.61" apply true
     kotlin("jvm") version "1.3.61"
     kotlin("plugin.spring") version "1.3.61"
-    kotlin("plugin.jpa") version "1.3.61"
+    kotlin("plugin.jpa") version "1.3.61" apply true
 }
 
 group = "com.example"
@@ -20,6 +22,7 @@ configurations {
 }
 
 repositories {
+    maven { url = uri("https://repo.spring.io/milestone") }
     mavenCentral()
 }
 
@@ -30,6 +33,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
+    implementation("org.postgresql:postgresql")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }

@@ -25,7 +25,7 @@ class DatasourceConfig (
         return HikariDataSource().also {
             it.jdbcUrl = zipConfig.dbUrl
             it.username = zipConfig.dbUser
-            it.password = zipConfig.dbPassword
+            it.password = zipConfig.dbPass
         }
     }
 

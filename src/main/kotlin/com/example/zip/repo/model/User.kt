@@ -3,7 +3,7 @@ package com.example.zip.repo.model
 import javax.persistence.*
 
 @Entity
-@Table(name = "USER", schema = "zip")
+@Table(name = "`USER`")
 data class User(
 
     @Id
