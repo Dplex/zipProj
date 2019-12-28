@@ -3,8 +3,8 @@ package com.example.zip.repo.model
 import javax.persistence.*
 
 @Entity
-@Table(name = "`USER`")
-data class User(
+@Table(name = "TUSER")
+data class UserVo(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,11 +12,11 @@ data class User(
     val id: Long? = null,
 
     @Column(name = "USER_LOGIN_ID", unique = true, length = 22, nullable = false)
-    var userLoginId: String,
+    var userLoginId: String = "",
 
     @Column(name = "USER_LOGIN_PASSWORD", length = 100, nullable = false)
-    var userLoginPass: String,
+    var userLoginPass: String = "",
 
     @Column(name = "USER_KEY", length = 100, nullable = true)
-    var userToken: String?
+    var userToken: String? = null
 )
