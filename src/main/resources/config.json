@@ -1,0 +1,5 @@
+{
+  "danjiUrl": "https://apis.zigbang.com/v2/danjis/%s",
+  "apartDetailUrl": "https://apis.zigbang.com/v2/danjis/%s/room_types",
+  "apartPriceUrl": "https://apis.zigbang.com/property/biglab/chart/apartments/line/%s/%s"
+}
