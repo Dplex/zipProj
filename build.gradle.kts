@@ -38,6 +38,7 @@ dependencies {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
     implementation("org.postgresql:postgresql")
+    implementation("com.google.code.gson:gson")
 }
 
 tasks.withType<Test> {

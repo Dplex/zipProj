@@ -21,14 +21,15 @@ class ZipConfig {
     @Value("\${database.user:user}")
     lateinit var dbUser: String
 
-    @Value("\${database.pass:}")
+    @Value("\${database.pass:pass}")
     lateinit var dbPass: String
 
     @PostConstruct
     fun init() {
         ObjectMapper().run {
             readValue(InputStreamReader(configResource.inputStream), AppConfiguration::class.java).run {
-                configuration = this
+                if (this.isValid())
+                    configuration = this
             }
         }
     }
