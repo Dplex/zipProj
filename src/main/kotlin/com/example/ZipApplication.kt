@@ -1,4 +1,4 @@
-package com.example.zip
+package com.example
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
