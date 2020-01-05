@@ -14,7 +14,7 @@ open class UserDto(
     val userToken: String? = null
 ) {
 
-    constructor(vo: UserVo): this(
+    constructor(vo: UserVo) : this(
         id = vo.id,
         userId = vo.userLoginId,
         userPass = vo.userLoginPass,

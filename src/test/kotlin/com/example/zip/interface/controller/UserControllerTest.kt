@@ -34,7 +34,7 @@ class UserControllerTest {
             { assertTrue(response.statusCode.is2xxSuccessful) },
             { assertTrue(response.body != null) },
             { assertTrue(response.body is UserResponse) }
-            )
+        )
     }
 
     @Test

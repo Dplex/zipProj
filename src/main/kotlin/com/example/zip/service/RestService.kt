@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service
 import java.net.URI
 
 @Service
-class RestService (
+class RestService(
     @Autowired private val zipRestTemplate: ZipRestTemplate,
     @Autowired private val zipConfig: ZipConfig
 ) {

@@ -19,4 +19,4 @@ data class UserVo(
 
     @Column(name = "USER_KEY", length = 100, nullable = true)
     var userToken: String? = null
-)
+) : UpdateMarkEntity()

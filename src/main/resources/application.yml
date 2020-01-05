@@ -2,3 +2,19 @@ database:
   url: url
   user: user
   pass: pass
+
+
+spring:
+  boot:
+    admin:
+      client:
+        url: "http://localhost:8081"
+  application:
+    name: "zip"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    show-details: ALWAYS

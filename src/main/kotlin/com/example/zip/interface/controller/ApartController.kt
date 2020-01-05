@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping(Api.Path.APART)
-class ApartController (
+class ApartController(
     @Autowired private val restService: RestService
 ) {
 

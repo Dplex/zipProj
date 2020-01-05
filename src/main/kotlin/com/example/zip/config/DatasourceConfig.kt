@@ -13,12 +13,12 @@ import javax.sql.DataSource
 
 @Configuration
 @EnableJpaRepositories(
-        basePackages = arrayOf("com.example.zip.repo"),
-        entityManagerFactoryRef = "zipEntityManager",
-        transactionManagerRef = "zipTransactionManager"
+    basePackages = arrayOf("com.example.zip.repo"),
+    entityManagerFactoryRef = "zipEntityManager",
+    transactionManagerRef = "zipTransactionManager"
 )
-class DatasourceConfig (
-        @Autowired private val zipConfig: ZipConfig
+class DatasourceConfig(
+    @Autowired private val zipConfig: ZipConfig
 ) {
 
     @Bean
@@ -40,7 +40,6 @@ class DatasourceConfig (
             setJpaPropertyMap(HashMap<String, Any>().apply {
                 put("hibernate.hbm2ddl.auto", "update")
                 put("hibernate.use_sql_comments", true)
-
             })
         }
     }
